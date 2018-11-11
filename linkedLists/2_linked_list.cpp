@@ -85,5 +85,4 @@ int main()
     cout<<"\n";
 	show(second);
 
-
 }

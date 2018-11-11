@@ -1,26 +1,4 @@
-#include <iostream>
-#include <queue>
-#include <bits/stdc++.h>
-using namespace std;
-
-struct node
-{
-	int data;
-	node* left;
-	node* right;
-	
-};
-
-node* newNode(int data)
-{
-	node* newnode  = new node;
-
-	newnode->data = data;
-	newnode->left = NULL;
-	newnode->right = NULL;
-
-	return(newnode);
-}
+#include "node.h"
 
 //     sample inorder tree
 //			25        //root
@@ -100,6 +78,12 @@ node* search(node* root, int item)
 	else
 		return search(root->right,item);
 }
+//     sample inorder tree
+//			25        //root
+//		  /    \
+//		 15      35
+//		/ \     / 
+//	   10  20  30
 
 node* getSuccessor(node* root, int item)
 {

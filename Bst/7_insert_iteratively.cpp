@@ -1,24 +1,5 @@
-#include <iostream>
-using namespace std;
+#include "node.h"
 
-struct node
-{
-	int data;
-	node* left;
-	node* right;
-	
-};
-
-node* newNode(int data)
-{
-	node* newnode  = new node;
-
-	newnode->data = data;
-	newnode->left = NULL;
-	newnode->right = NULL;
-
-	return(newnode);
-}
 
 //     sample inorder tree
 //			25        //root
