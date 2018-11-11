@@ -2,3 +2,6 @@
 checkError/
 STL/
 goodrich/
+*
+!*.cpp
+!*.h
