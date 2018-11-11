@@ -31,22 +31,18 @@ node* inorderRoot()
 void inorderIter(node* root)
 {
 	stack<node*> s;
-	s.push(root);
 	node* current = root;
-	while(true)
+	while(current!=NULL || !s.empty())
 	{
-		if(current!=NULL)
+		while(current != NULL) 
 		{
 			s.push(current);
 			current = current->left;
 		}
-		else
-		{	if(s.empty()){break;}
-			current = s.top();
-			cout<<current->data<<endl;
-			s.pop();
-			current = current->right;
-		}
+		current = s.top();
+		s.pop();
+		cout<<current->data<<endl;
+		current = current->right;
 	}
 }
 
